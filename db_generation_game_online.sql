@@ -59,7 +59,7 @@ SELECT * FROM tb_personagens WHERE ataque > 2000;
 
 SELECT * FROM tb_personagens WHERE defesa BETWEEN 1000 AND 2000;
 
--- Mostrar personagens com LIKE buscando a letra cache index
+-- Mostrar personagens com LIKE buscando a letra C
 
 SELECT * FROM tb_personagens WHERE nome_personagem LIKE "%c%";
 
@@ -67,4 +67,4 @@ SELECT * FROM tb_personagens WHERE nome_personagem LIKE "%c%";
 -- traduzindo: selecionar (Tudo ou o que está descrito abaixo) da tb_personagens, "juntar" a tabela classe com a coluna id da tabela classe se for igual à coluna fk_classe da tabela personagens
 SELECT tb_personagens.nome_personagem, tb_personagens.nivel, tb_classe.nome_classe 
 FROM tb_personagens
-INNER JOIN tb_classe on tb_classe.id = tb_personagens.fk_classe;
+INNER JOIN tb_classe ON tb_classe.id = tb_personagens.fk_classe;
